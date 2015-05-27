@@ -141,8 +141,8 @@ class BaseRubyTask(sublime_plugin.TextCommand):
     bundler = s.get("check_for_bundler")
     spring  = s.get("check_for_spring")
     if rbenv or rvm: self.rbenv_or_rvm(s, rbenv, rvm)
-    if spring: self.spring_support()
     if bundler: self.bundler_support()
+    if spring: self.spring_support()
 
   def spring_support(self):
     global COMMAND_PREFIX
